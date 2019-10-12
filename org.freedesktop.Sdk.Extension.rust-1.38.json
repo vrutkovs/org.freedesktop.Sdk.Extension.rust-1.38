@@ -1,10 +1,10 @@
 {
-  "id": "org.freedesktop.Sdk.Extension.rust-stable",
-  "branch": "1.6",
+  "id": "org.freedesktop.Sdk.Extension.rust-1.38",
+  "branch": "19.08",
   "runtime": "org.freedesktop.Sdk",
   "build-extension": true,
   "sdk": "org.freedesktop.Sdk",
-  "runtime-version": "1.6",
+  "runtime-version": "19.08",
   "sdk-extensions": [],
   "separate-locales": false,
   "appstream-compose": false,
@@ -15,7 +15,7 @@
   "build-options": {
     "cflags": "-O2 -g",
     "cxxflags": "-O2 -g",
-    "prefix": "/usr/lib/sdk/rust-stable",
+    "prefix": "/usr/lib/sdk/rust-1.38",
     "env": {
       "V": "1"
     }
@@ -62,7 +62,7 @@
         }
       ],
       "build-commands": [
-        "./install.sh --prefix=/usr/lib/sdk/rust-stable --disable-ldconfig --verbose"
+        "./install.sh --prefix=/usr/lib/sdk/rust-1.38 --disable-ldconfig --verbose"
       ]
     },
     {
@@ -71,14 +71,14 @@
         {
           "type": "script",
           "commands": [
-            "export PATH=$PATH:/usr/lib/sdk/rust-stable/bin"
+            "export PATH=$PATH:/usr/lib/sdk/rust-1.38/bin"
           ],
           "dest-filename": "enable.sh"
         }
       ],
       "buildsystem": "simple",
       "build-commands": [
-        "cp enable.sh /usr/lib/sdk/rust-stable/"
+        "cp enable.sh /usr/lib/sdk/rust-1.38/"
       ]
     },
     {
@@ -86,13 +86,13 @@
       "buildsystem": "simple",
       "build-commands": [
         "mkdir -p ${FLATPAK_DEST}/share/appdata",
-        "cp org.freedesktop.Sdk.Extension.rust-stable.appdata.xml ${FLATPAK_DEST}/share/appdata",
-        "appstream-compose  --basename=org.freedesktop.Sdk.Extension.rust-stable --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.Sdk.Extension.rust-stable"
+        "cp org.freedesktop.Sdk.Extension.rust-1.38.appdata.xml ${FLATPAK_DEST}/share/appdata",
+        "appstream-compose  --basename=org.freedesktop.Sdk.Extension.rust-1.38 --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.Sdk.Extension.rust-1.38"
       ],
       "sources": [
         {
           "type": "file",
-          "path": "org.freedesktop.Sdk.Extension.rust-stable.appdata.xml"
+          "path": "org.freedesktop.Sdk.Extension.rust-1.38.appdata.xml"
         }
       ]
     }
