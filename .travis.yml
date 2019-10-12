@@ -25,4 +25,4 @@ deploy:
   repo: vrutkovs/flatpaks
   github_token: $GITHUB_TOKEN
   on:
-    branch: binaries
+    branch: master
