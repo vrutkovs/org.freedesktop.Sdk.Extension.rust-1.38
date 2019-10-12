@@ -1,5 +1,5 @@
 {
-  "id": "org.freedesktop.Sdk.Extension.rust-1.38",
+  "id": "org.freedesktop.Sdk.Extension.rust-1dot38",
   "branch": "19.08",
   "runtime": "org.freedesktop.Sdk",
   "build-extension": true,
@@ -15,7 +15,7 @@
   "build-options": {
     "cflags": "-O2 -g",
     "cxxflags": "-O2 -g",
-    "prefix": "/usr/lib/sdk/rust-1.38",
+    "prefix": "/usr/lib/sdk/rust-1dot38",
     "env": {
       "V": "1"
     }
@@ -86,13 +86,13 @@
       "buildsystem": "simple",
       "build-commands": [
         "mkdir -p ${FLATPAK_DEST}/share/appdata",
-        "cp org.freedesktop.Sdk.Extension.rust-1.38.appdata.xml ${FLATPAK_DEST}/share/appdata",
-        "appstream-compose  --basename=org.freedesktop.Sdk.Extension.rust-1.38 --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.Sdk.Extension.rust-1.38"
+        "cp org.freedesktop.Sdk.Extension.rust-1dot38.appdata.xml ${FLATPAK_DEST}/share/appdata",
+        "appstream-compose  --basename=org.freedesktop.Sdk.Extension.rust-1dot38 --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.Sdk.Extension.rust-1dot38"
       ],
       "sources": [
         {
           "type": "file",
-          "path": "org.freedesktop.Sdk.Extension.rust-1.38.appdata.xml"
+          "path": "org.freedesktop.Sdk.Extension.rust-1dot38.appdata.xml"
         }
       ]
     }
