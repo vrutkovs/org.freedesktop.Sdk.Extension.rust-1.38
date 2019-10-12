@@ -62,7 +62,7 @@
         }
       ],
       "build-commands": [
-        "./install.sh --prefix=/usr/lib/sdk/rust-1.38 --disable-ldconfig --verbose"
+        "./install.sh --prefix=/usr/lib/sdk/rust-1dot38 --disable-ldconfig --verbose"
       ]
     },
     {
