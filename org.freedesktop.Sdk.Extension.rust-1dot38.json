@@ -66,22 +66,6 @@
       ]
     },
     {
-      "name": "scripts",
-      "sources": [
-        {
-          "type": "script",
-          "commands": [
-            "export PATH=$PATH:/usr/lib/sdk/rust-1.38/bin"
-          ],
-          "dest-filename": "enable.sh"
-        }
-      ],
-      "buildsystem": "simple",
-      "build-commands": [
-        "cp enable.sh /usr/lib/sdk/rust-1.38/"
-      ]
-    },
-    {
       "name": "appdata",
       "buildsystem": "simple",
       "build-commands": [
