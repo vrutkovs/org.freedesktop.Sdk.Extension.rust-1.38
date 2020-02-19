@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2019 Daniel García Moreno <danigm@gnome.org> -->
 <component type="runtime">
-  <id>org.freedesktop.Sdk.Extension.rust-1dot38</id>
+  <id>org.freedesktop.Sdk.Extension.rust-1dot41</id>
   <metadata_license>CC0-1.0</metadata_license>
   <name>Rust stable Sdk extension</name>
   <summary>Rust stable compiler and tools</summary>
