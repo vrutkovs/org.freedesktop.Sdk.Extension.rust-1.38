@@ -11,7 +11,7 @@ install-deps:
 build:
 	flatpak-builder --force-clean --ccache --require-changes --repo=repo \
 		--subject="Rust 1.38, `date`" \
-		${EXPORT_ARGS} app org.freedesktop.Sdk.Extension.rust-1dot41.json
+		${EXPORT_ARGS} app org.freedesktop.Sdk.Extension.rust-1dot43.json
 
 update-repo:
 	flatpak build-update-repo --prune --prune-depth=20 --generate-static-deltas repo
