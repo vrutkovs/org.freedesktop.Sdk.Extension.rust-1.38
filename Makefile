@@ -1,4 +1,4 @@
-all: prepare-repo install-deps build update-repo
+all: prepare-repo install-deps build clean-cache update-repo copy-to-export
 
 prepare-repo:
 	[[ -d repo ]] || ostree init --mode=archive-z2 --repo=repo
@@ -10,9 +10,16 @@ install-deps:
 
 build:
 	flatpak-builder --force-clean --ccache --require-changes --repo=repo \
-		--subject="Rust 1.38, `date`" \
+		--subject="Rust stable, `date`" \
 		${EXPORT_ARGS} app org.freedesktop.Sdk.Extension.rust-1dot43.json
+
+clean-cache:
+	rm -rf .flatpak-builder/build
 
 update-repo:
 	flatpak build-update-repo --prune --prune-depth=20 --generate-static-deltas repo
 	rm -rf repo/.lock
+
+copy-to-export:
+	rm -rf export && mkdir export
+	cp -rf repo/ export/
