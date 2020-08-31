@@ -1,5 +1,5 @@
 {
-  "id": "org.freedesktop.Sdk.Extension.rust-1dot43",
+  "id": "org.freedesktop.Sdk.Extension.rust-1dot46",
   "branch": "20.08",
   "runtime": "org.freedesktop.Sdk",
   "build-extension": true,
@@ -15,7 +15,7 @@
   "build-options": {
     "cflags": "-O2 -g",
     "cxxflags": "-O2 -g",
-    "prefix": "/usr/lib/sdk/rust-1dot43",
+    "prefix": "/usr/lib/sdk/rust-1dot46",
     "env": {
       "V": "1"
     }
@@ -33,12 +33,12 @@
           "only-arches": [
             "x86_64"
           ],
-          "url": "https://static.rust-lang.org/dist/rust-1.43.0-x86_64-unknown-linux-gnu.tar.gz",
-          "sha256": "069f34fa5cef92551724c83c36360df1ac66fe3942bc1d0e4d341ce79611a029"
+          "url": "https://static.rust-lang.org/dist/rust-1.46.0-x86_64-unknown-linux-gnu.tar.gz",
+          "sha256": "e3b98bc3440fe92817881933f9564389eccb396f5f431f33d48b979fa2fbdcf5"
         }
       ],
       "build-commands": [
-        "./install.sh --prefix=/usr/lib/sdk/rust-1dot43 --disable-ldconfig --verbose"
+        "./install.sh --prefix=/usr/lib/sdk/rust-1dot46 --disable-ldconfig --verbose"
       ]
     },
     {
@@ -46,13 +46,13 @@
       "buildsystem": "simple",
       "build-commands": [
         "mkdir -p ${FLATPAK_DEST}/share/appdata",
-        "cp org.freedesktop.Sdk.Extension.rust-1dot43.appdata.xml ${FLATPAK_DEST}/share/appdata",
-        "appstream-compose  --basename=org.freedesktop.Sdk.Extension.rust-1dot43 --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.Sdk.Extension.rust-1dot43"
+        "cp org.freedesktop.Sdk.Extension.rust-1dot46.appdata.xml ${FLATPAK_DEST}/share/appdata",
+        "appstream-compose  --basename=org.freedesktop.Sdk.Extension.rust-1dot46 --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.Sdk.Extension.rust-1dot46"
       ],
       "sources": [
         {
           "type": "file",
-          "path": "org.freedesktop.Sdk.Extension.rust-1dot43.appdata.xml"
+          "path": "org.freedesktop.Sdk.Extension.rust-1dot46.appdata.xml"
         }
       ]
     }
