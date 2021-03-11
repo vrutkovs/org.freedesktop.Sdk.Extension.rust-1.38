@@ -33,7 +33,7 @@ jobs:
       - name: Upload flatpak
         uses: vrutkovs/action-flatpak-upload@main
         with:
-          build_repo: ${{ steps.build_flatpak.outputs.build-repo }}
+          build-repo-path: ${{ steps.build_flatpak.outputs.build-repo }}
           url: https://flatpak.russianfedora.online/repo
           name: stable
           token: ${{ secrets.REPO_TOKEN }}
