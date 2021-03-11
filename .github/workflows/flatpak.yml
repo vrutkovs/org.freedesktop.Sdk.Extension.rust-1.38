@@ -31,7 +31,9 @@ jobs:
           branch: master
 
       - name: Upload flatpak
-        uses: actions/upload-artifact@v2
+        uses: vrutkovs/action-flatpak-upload@main
         with:
-          name: wine-build-repo
-          path: ${{ steps.build_flatpak.outputs.build-repo }}
+          build_repo: ${{ steps.build_flatpak.outputs.build-repo }}
+          url: https://flatpak.russianfedora.online/repo
+          name: stable
+          token: ${{ secrets.REPO_TOKEN }}
