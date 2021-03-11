@@ -1,0 +1,38 @@
+id: org.freedesktop.Sdk.Extension.rust-1dot50
+branch: 20.08
+runtime: org.freedesktop.Sdk
+build-extension: true
+sdk: org.freedesktop.Sdk
+runtime-version: 20.08
+sdk-extensions: []
+separate-locales: false
+appstream-compose: false
+cleanup:
+  - /share/info
+  - /share/man
+build-options:
+  cflags: -O2 -g
+  cxxflags: -O2 -g
+  prefix: /usr/lib/sdk/rust-1dot50
+modules:
+  - name: rust
+    buildsystem: simple
+    cleanup:
+      - /share/doc/rust/html
+    sources:
+      - type: archive
+        only-arches:
+          - x86_64
+        url: https://static.rust-lang.org/dist/rust-1.50.0-x86_64-unknown-linux-gnu.tar.gz
+        sha256: fa889b53918980aea2dea42bfae4e858dcb2104c6fdca6e4fe359f3a49767701
+    build-commands:
+      - ./install.sh --prefix=/usr/lib/sdk/rust-1dot50 --disable-ldconfig --verbose
+  - name: appdata
+    buildsystem: simple
+    build-commands:
+      - mkdir -p ${FLATPAK_DEST}/share/appdata
+      - cp org.freedesktop.Sdk.Extension.rust-1dot50.appdata.xml ${FLATPAK_DEST}/share/appdata
+      - appstream-compose  --basename=org.freedesktop.Sdk.Extension.rust-1dot50 --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.Sdk.Extension.rust-1dot50
+    sources:
+    - type: file
+      path: org.freedesktop.Sdk.Extension.rust-1dot50.appdata.xml
