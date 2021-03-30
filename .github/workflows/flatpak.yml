@@ -26,7 +26,7 @@ jobs:
         id: build_flatpak
         with:
           kind: app
-          id: org.freedesktop.Sdk.Extension.rust-1dot50
+          id: org.freedesktop.Sdk.Extension.rust-1dot51
           arch: x86_64
           branch: master
 
