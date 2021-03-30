@@ -27,6 +27,15 @@ modules:
         sha256: 9e125977aa13f012a68fdc6663629c685745091ae244f0587dd55ea4e3a3e42f
     build-commands:
       - ./install.sh --prefix=/usr/lib/sdk/rust-1dot51 --disable-ldconfig --verbose
+  - name: rust-src
+    buildsystem: simple
+    sources:
+      - type: archive
+        url: https://github.com/rust-lang/rust/archive/refs/tags/1.51.0.tar.gz
+        sha256: bd78f073306ac6a3984219e274f9d80923ef0845c86cf8b98fb8cc0b05a58d1e
+    build-commands:
+      - mkdir -p /usr/lib/sdk/rust-1dot51/lib/rustlib/src/rust
+      - cp -rf . /usr/lib/sdk/rust-1dot51/lib/rustlib/src/rust
   - name: appdata
     buildsystem: simple
     build-commands:
