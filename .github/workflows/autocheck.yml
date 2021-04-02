@@ -1,0 +1,15 @@
+name: Check for new versions
+on:
+  schedule:
+  - cron: "0 */8 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/flathub/flatpak-external-data-checker:latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          /app/flatpak-external-data-checker *.y*ml
