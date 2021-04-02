@@ -25,6 +25,10 @@ modules:
           - x86_64
         url: https://static.rust-lang.org/dist/rust-1.51.0-x86_64-unknown-linux-gnu.tar.gz
         sha256: 9e125977aa13f012a68fdc6663629c685745091ae244f0587dd55ea4e3a3e42f
+        x-checker-data:
+          type: anitya
+          project-id: 7635
+          url-template: https://static.rust-lang.org/dist/rust-$version-x86_64-unknown-linux-gnu.tar.gz
     build-commands:
       - ./install.sh --prefix=/usr/lib/sdk/rust-1dot51 --disable-ldconfig --verbose
   - name: rust-src
@@ -33,9 +37,13 @@ modules:
       - type: archive
         url: https://github.com/rust-lang/rust/archive/refs/tags/1.51.0.tar.gz
         sha256: bd78f073306ac6a3984219e274f9d80923ef0845c86cf8b98fb8cc0b05a58d1e
+        x-checker-data:
+          type: anitya
+          project-id: 7635
+          url-template: https://github.com/rust-lang/rust/archive/refs/tags/$version.tar.gz
     build-commands:
-      - mkdir -p /usr/lib/sdk/rust-1dot51/lib/rustlib/src/rust
-      - cp -rf . /usr/lib/sdk/rust-1dot51/lib/rustlib/src/rust
+        - mkdir -p /usr/lib/sdk/rust-1dot51/lib/rustlib/src/rust
+        - cp -rf . /usr/lib/sdk/rust-1dot51/lib/rustlib/src/rust
   - name: appdata
     buildsystem: simple
     build-commands:
