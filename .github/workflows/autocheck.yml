@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          /app/flatpak-external-data-checker *.y*ml
+          env ${{ secrets.REPO_TOKEN }} /app/flatpak-external-data-checker *.y*ml --update
