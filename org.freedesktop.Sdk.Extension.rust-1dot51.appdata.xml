@@ -8,6 +8,9 @@
   <description>Rust stable compiler and tools</description>
   <project_license>Apache-2.0 AND MIT</project_license>
   <url type="homepage">https://github.com/flathub/org.freedesktop.Sdk.Extension.rust-stable/</url>
-  <translation></translation>
+  <translation/>
   <update_contact>danigm@gnome.org</update_contact>
+  <releases>
+    <release version="1.52.0" date="2021-05-08"/>
+  </releases>
 </component>
