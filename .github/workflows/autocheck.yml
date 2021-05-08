@@ -13,6 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
+          git config --global user.email "vadim@vrutkovs.eu"
+          git config --global user.name "Vadim Rutkovsky"
           /app/flatpak-external-data-checker *.y*ml --update
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
