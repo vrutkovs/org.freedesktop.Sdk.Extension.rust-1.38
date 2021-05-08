@@ -2,6 +2,7 @@ name: Check for new versions
 on:
   schedule:
   - cron: "0 */8 * * *"
+  workflow_dispatch: {}
 
 jobs:
   build:
