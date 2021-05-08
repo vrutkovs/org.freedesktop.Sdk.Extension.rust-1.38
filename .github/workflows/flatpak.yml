@@ -31,6 +31,7 @@ jobs:
           branch: master
 
       - name: Upload flatpak
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: vrutkovs/action-flatpak-upload@main
         with:
           build-repo-path: ${{ steps.build_flatpak.outputs.build-repo }}
