@@ -17,4 +17,4 @@ jobs:
           git config --global user.name "Vadim Rutkovsky"
           /app/flatpak-external-data-checker *.y*ml --update
         env:
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
