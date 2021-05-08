@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2019 Daniel García Moreno <danigm@gnome.org> -->
 <component type="runtime">
-  <id>org.freedesktop.Sdk.Extension.rust-1dot51</id>
+  <id>org.freedesktop.Sdk.Extension.rust-1dot52</id>
   <metadata_license>CC0-1.0</metadata_license>
   <name>Rust stable Sdk extension</name>
   <summary>Rust stable compiler and tools</summary>
   <description>Rust stable compiler and tools</description>
   <project_license>Apache-2.0 AND MIT</project_license>
   <url type="homepage">https://github.com/flathub/org.freedesktop.Sdk.Extension.rust-stable/</url>
-  <translation></translation>
+  <translation/>
   <update_contact>danigm@gnome.org</update_contact>
+  <releases>
+    <release version="1.52.0" date="2021-05-08"/>
+  </releases>
 </component>

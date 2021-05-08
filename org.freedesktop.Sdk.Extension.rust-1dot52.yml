@@ -1,4 +1,4 @@
-id: org.freedesktop.Sdk.Extension.rust-1dot51
+id: org.freedesktop.Sdk.Extension.rust-1dot52
 branch: 20.08
 runtime: org.freedesktop.Sdk
 build-extension: true
@@ -13,7 +13,7 @@ cleanup:
 build-options:
   cflags: -O2 -g
   cxxflags: -O2 -g
-  prefix: /usr/lib/sdk/rust-1dot51
+  prefix: /usr/lib/sdk/rust-1dot52
 modules:
   - name: rust
     buildsystem: simple
@@ -23,33 +23,34 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://static.rust-lang.org/dist/rust-1.51.0-x86_64-unknown-linux-gnu.tar.gz
-        sha256: 9e125977aa13f012a68fdc6663629c685745091ae244f0587dd55ea4e3a3e42f
+        url: https://static.rust-lang.org/dist/rust-1.52.0-x86_64-unknown-linux-gnu.tar.gz
+        sha256: c082b5eea81206ff207407b41a10348282362dd972e93c86b054952b66ca0e2b
         x-checker-data:
           type: anitya
           project-id: 7635
           url-template: https://static.rust-lang.org/dist/rust-$version-x86_64-unknown-linux-gnu.tar.gz
     build-commands:
-      - ./install.sh --prefix=/usr/lib/sdk/rust-1dot51 --disable-ldconfig --verbose
+      - ./install.sh --prefix=/usr/lib/sdk/rust-1dot52 --disable-ldconfig --verbose
   - name: rust-src
     buildsystem: simple
     sources:
       - type: archive
-        url: https://github.com/rust-lang/rust/archive/refs/tags/1.51.0.tar.gz
-        sha256: bd78f073306ac6a3984219e274f9d80923ef0845c86cf8b98fb8cc0b05a58d1e
+        url: https://github.com/rust-lang/rust/archive/refs/tags/1.52.0.tar.gz
+        sha256: fb96a4c72a3fb4d993d651424f755d2018d9e8b32053d5c06cbeca659ffc68c1
         x-checker-data:
           type: anitya
           project-id: 7635
           url-template: https://github.com/rust-lang/rust/archive/refs/tags/$version.tar.gz
     build-commands:
-        - mkdir -p /usr/lib/sdk/rust-1dot51/lib/rustlib/src/rust
-        - cp -rf . /usr/lib/sdk/rust-1dot51/lib/rustlib/src/rust
+      - mkdir -p /usr/lib/sdk/rust-1dot52/lib/rustlib/src/rust
+      - cp -rf . /usr/lib/sdk/rust-1dot52/lib/rustlib/src/rust
   - name: appdata
     buildsystem: simple
     build-commands:
       - mkdir -p ${FLATPAK_DEST}/share/appdata
-      - cp org.freedesktop.Sdk.Extension.rust-1dot51.appdata.xml ${FLATPAK_DEST}/share/appdata
-      - appstream-compose  --basename=org.freedesktop.Sdk.Extension.rust-1dot51 --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.Sdk.Extension.rust-1dot51
+      - cp org.freedesktop.Sdk.Extension.rust-1dot52.appdata.xml ${FLATPAK_DEST}/share/appdata
+      - appstream-compose  --basename=org.freedesktop.Sdk.Extension.rust-1dot52 --prefix=${FLATPAK_DEST}
+        --origin=flatpak org.freedesktop.Sdk.Extension.rust-1dot52
     sources:
-    - type: file
-      path: org.freedesktop.Sdk.Extension.rust-1dot51.appdata.xml
+      - type: file
+        path: org.freedesktop.Sdk.Extension.rust-1dot52.appdata.xml
