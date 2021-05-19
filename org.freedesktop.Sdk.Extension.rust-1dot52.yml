@@ -23,8 +23,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://static.rust-lang.org/dist/rust-1.52.0-x86_64-unknown-linux-gnu.tar.gz
-        sha256: c082b5eea81206ff207407b41a10348282362dd972e93c86b054952b66ca0e2b
+        url: https://static.rust-lang.org/dist/rust-1.52.1-x86_64-unknown-linux-gnu.tar.gz
+        sha256: 617ae06e212cb65bc4abbf52b158b0328b9f1a6c2f822c27c95b274d6fbc0627
         x-checker-data:
           type: anitya
           project-id: 7635
@@ -35,8 +35,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://github.com/rust-lang/rust/archive/refs/tags/1.52.0.tar.gz
-        sha256: fb96a4c72a3fb4d993d651424f755d2018d9e8b32053d5c06cbeca659ffc68c1
+        url: https://github.com/rust-lang/rust/archive/refs/tags/1.52.1.tar.gz
+        sha256: 6b035c0a86e044f580afc73e84081056b87cb867b677adeedbc17ef639454a44
         x-checker-data:
           type: anitya
           project-id: 7635
